@@ -1,0 +1,32 @@
+{
+  "cities": [
+    {
+      "name": "Oakland",
+      "state": "CA",
+      "slug": "oakland-ca",
+      "active": true,
+      "colors": {
+        "primary": "#2D5F2D",
+        "accent": "#C4A747",
+        "bgSubtle": "#F5F2E8",
+        "textOnPrimary": "#FFFFFF"
+      },
+      "meta": {
+        "population": "433000",
+        "tagline": "The Town",
+        "neighborhoods": [
+          "Temescal",
+          "Fruitvale",
+          "Jack London Square",
+          "Rockridge",
+          "Downtown",
+          "West Oakland",
+          "East Oakland",
+          "Piedmont Ave",
+          "Lake Merritt",
+          "Chinatown"
+        ]
+      }
+    }
+  ]
+}

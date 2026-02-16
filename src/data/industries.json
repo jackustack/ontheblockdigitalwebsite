@@ -1,0 +1,34 @@
+{
+  "industries": [
+    {
+      "name": "Restaurant",
+      "slug": "restaurants",
+      "tier": 1,
+      "aliases": ["café", "cafe", "diner", "eatery", "food service", "bar", "bistro", "bakery"]
+    },
+    {
+      "name": "Home Services",
+      "slug": "home-services",
+      "tier": 1,
+      "aliases": ["plumber", "plumbing", "electrician", "hvac", "contractor", "handyman", "roofing", "landscaping", "cleaning"]
+    },
+    {
+      "name": "Dental",
+      "slug": "dental",
+      "tier": 2,
+      "aliases": ["dentist", "dental practice", "orthodontist", "oral surgery"]
+    },
+    {
+      "name": "Legal",
+      "slug": "legal",
+      "tier": 2,
+      "aliases": ["lawyer", "law firm", "attorney", "legal services"]
+    },
+    {
+      "name": "Retail",
+      "slug": "retail",
+      "tier": 2,
+      "aliases": ["shop", "store", "boutique", "retail store"]
+    }
+  ]
+}

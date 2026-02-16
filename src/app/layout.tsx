@@ -4,7 +4,7 @@ import { SkipToContent } from "@/components/ui/SkipToContent";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { GoogleAnalytics } from "@/components/seo/GoogleAnalytics";
-import { SITE_NAME, SITE_URL } from "@/lib/utils";
+import { SITE_NAME, SITE_URL, ogImageUrl } from "@/lib/utils";
 import "./globals.css";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -37,12 +37,21 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} — Your neighbors are searching for you`,
     description:
       "On The Block Digital helps Main Street businesses get found, get chosen, and grow.",
+    images: [
+      {
+        url: ogImageUrl("Your neighbors are searching for you", "Get found. Get chosen. Grow."),
+        width: 1200,
+        height: 630,
+        alt: "On The Block Digital — Your neighbors are searching for you",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} — Your neighbors are searching for you`,
     description:
       "On The Block Digital helps Main Street businesses get found, get chosen, and grow.",
+    images: [ogImageUrl("Your neighbors are searching for you", "Get found. Get chosen. Grow.")],
   },
   robots: {
     index: true,

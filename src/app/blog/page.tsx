@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ogImageUrl } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Blog",
   description:
     "Tips, strategies, and local insights to help Main Street businesses get found and grow. From On The Block Digital.",
+  openGraph: {
+    images: [{ url: ogImageUrl("The Block Blog", "Tips, insights, and stories from the block."), width: 1200, height: 630 }],
+  },
 };
 
 export default function BlogPage() {

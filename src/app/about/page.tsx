@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ogImageUrl } from "@/lib/utils";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "On The Block Digital is a hyper-local digital growth partner for Main Street businesses. We help you get found, get chosen, and grow.",
+  openGraph: {
+    images: [{ url: ogImageUrl("About On The Block Digital", "Your neighbors, and we know marketing."), width: 1200, height: 630 }],
+  },
 };
 
 export default function AboutPage() {

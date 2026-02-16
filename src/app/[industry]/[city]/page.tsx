@@ -11,7 +11,7 @@ import {
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CityBadge } from "@/components/city/CityBadge";
 import { LeadCaptureForm } from "@/components/ui/LeadCaptureForm";
-import { SITE_NAME } from "@/lib/utils";
+import { SITE_NAME, ogImageUrl } from "@/lib/utils";
 
 interface PageProps {
   params: Promise<{ industry: string; city: string }>;
@@ -29,15 +29,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!industry || !city) return {};
 
   if (industry.tier === 1) {
+    const title = `Get More Customers for Your ${industry.name} Business in ${city.name}`;
     return {
-      title: `Get More Customers for Your ${industry.name} Business in ${city.name} | ${SITE_NAME}`,
+      title: `${title} | ${SITE_NAME}`,
       description: `${SITE_NAME} helps ${industry.name.toLowerCase()} businesses in ${city.name}, ${city.state} get found, get chosen, and grow. Outcome-driven digital marketing for your block.`,
+      openGraph: {
+        images: [{ url: ogImageUrl(title, `Outcome-driven marketing in ${city.name}, ${city.state}`, city.slug), width: 1200, height: 630 }],
+      },
     };
   }
 
+  const title = `${industry.name} Marketing in ${city.name} — Coming Soon`;
   return {
-    title: `${industry.name} Marketing in ${city.name} — Coming Soon | ${SITE_NAME}`,
+    title: `${title} | ${SITE_NAME}`,
     description: `We're bringing outcome-driven digital marketing to ${industry.name.toLowerCase()} businesses in ${city.name}, ${city.state}. Be the first on the block.`,
+    openGraph: {
+      images: [{ url: ogImageUrl(title, `Be the first on the block in ${city.name}`, city.slug), width: 1200, height: 630 }],
+    },
   };
 }
 

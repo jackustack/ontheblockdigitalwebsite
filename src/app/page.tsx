@@ -6,25 +6,21 @@ import { organizationSchema } from "@/lib/schema";
 
 const outcomes = [
   {
-    icon: "📍",
     heading: "Get Found",
     description:
       "When your neighbors search for what you do, you show up — not your competition.",
   },
   {
-    icon: "📞",
     heading: "Get More Calls",
     description:
       "Your phone rings more. Your calendar fills up. Your business grows.",
   },
   {
-    icon: "🚶",
     heading: "Bring People Through the Door",
     description:
       "More foot traffic, more regulars, more people who become loyal customers.",
   },
   {
-    icon: "💡",
     heading: "Stop Guessing",
     description:
       "Know what's working and what isn't. Spend less time worrying about marketing.",

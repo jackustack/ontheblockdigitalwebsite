@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ogImageUrl } from "@/lib/utils";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Results",
   description:
     "See how On The Block Digital helps Main Street businesses get found, get more calls, and grow. Real outcomes for real businesses.",
+  openGraph: {
+    images: [{ url: ogImageUrl("Results that matter", "Real outcomes for real businesses."), width: 1200, height: 630 }],
+  },
 };
 
 export default function ResultsPage() {

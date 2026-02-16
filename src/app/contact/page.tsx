@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { LeadCaptureForm } from "@/components/ui/LeadCaptureForm";
+import { ogImageUrl } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with On The Block Digital. Tell us about your business and we'll show you how to get found, get more calls, and grow.",
+  openGraph: {
+    images: [{ url: ogImageUrl("Let's talk about your block", "Tell us about your business."), width: 1200, height: 630 }],
+  },
 };
 
 export default function ContactPage() {

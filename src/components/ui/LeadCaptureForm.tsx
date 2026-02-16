@@ -15,11 +15,43 @@ export function LeadCaptureForm({
   heading = "Tell us about your business",
 }: LeadCaptureFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: wire up to API route or server action
-    setSubmitted(true);
+    setError("");
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          message: data.get("message"),
+          industry: data.get("industry"),
+          city: data.get("city"),
+        }),
+      });
+
+      if (!res.ok) {
+        const body = await res.json();
+        setError(body.error || "Something went wrong. Please try again.");
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -38,6 +70,12 @@ export function LeadCaptureForm({
       className="mx-auto max-w-lg space-y-4"
     >
       <p className="text-xl font-semibold text-primary">{heading}</p>
+
+      {error && (
+        <p className="rounded-lg bg-red-50 p-3 text-sm text-red-700" role="alert">
+          {error}
+        </p>
+      )}
 
       <div>
         <label htmlFor="lead-name" className="block text-sm font-medium mb-1">
@@ -92,8 +130,8 @@ export function LeadCaptureForm({
       {industry && <input type="hidden" name="industry" value={industry} />}
       {city && <input type="hidden" name="city" value={city} />}
 
-      <Button type="submit" className="w-full">
-        Get Started
+      <Button type="submit" className="w-full" disabled={submitting}>
+        {submitting ? "Sending..." : "Get Started"}
       </Button>
     </form>
   );

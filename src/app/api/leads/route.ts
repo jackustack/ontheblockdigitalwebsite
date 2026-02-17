@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { appendLead } from "@/lib/sheets";
 
 interface LeadPayload {
   name: string;
@@ -31,11 +32,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Replace with your preferred storage/notification:
-    // - Send to email via Resend, SendGrid, etc.
-    // - Write to a database (Supabase, Planetscale, etc.)
-    // - Forward to a CRM (HubSpot, etc.)
-    console.log("New lead received:", {
+    const leadData = {
       name: body.name.trim(),
       email: body.email.trim(),
       phone: body.phone?.trim() || "",
@@ -43,7 +40,19 @@ export async function POST(request: Request) {
       industry: body.industry || "",
       city: body.city || "",
       receivedAt: new Date().toISOString(),
-    });
+    };
+
+    console.log("New lead received:", leadData);
+
+    try {
+      await appendLead(leadData);
+    } catch (sheetError) {
+      console.error("Failed to write lead to Google Sheet:", sheetError);
+      return NextResponse.json(
+        { error: "Something went wrong. Please try again later." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch {

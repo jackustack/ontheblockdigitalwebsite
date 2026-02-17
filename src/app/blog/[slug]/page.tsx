@@ -65,7 +65,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <article className="px-4 py-20">
       <JsonLd data={schema} />
       <div className="mx-auto max-w-2xl">
-        <nav aria-label="Breadcrumb" className="mb-8 text-sm text-text/50">
+        <nav aria-label="Breadcrumb" className="mb-8 text-sm text-text/65">
           <Link href="/blog" className="hover:text-accent">
             Blog
           </Link>
@@ -76,7 +76,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </nav>
 
         <header className="mb-10">
-          <div className="flex items-center gap-2 text-sm text-text/50">
+          <div className="flex items-center gap-2 text-sm text-text/65">
             <time dateTime={post.date}>
               {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",

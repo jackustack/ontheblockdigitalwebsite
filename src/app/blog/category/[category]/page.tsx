@@ -53,7 +53,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   return (
     <section className="px-4 py-20">
       <div className="mx-auto max-w-3xl">
-        <nav aria-label="Breadcrumb" className="mb-8 text-sm text-text/50">
+        <nav aria-label="Breadcrumb" className="mb-8 text-sm text-text/65">
           <Link href="/blog" className="hover:text-accent">
             Blog
           </Link>
@@ -82,7 +82,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 >
                   <time
                     dateTime={post.date}
-                    className="text-sm text-text/50"
+                    className="text-sm text-text/65"
                   >
                     {new Date(post.date).toLocaleDateString("en-US", {
                       year: "numeric",

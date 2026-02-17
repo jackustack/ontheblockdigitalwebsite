@@ -64,7 +64,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-text/10 pt-6 text-center text-sm text-text/50">
+        <div className="mt-12 border-t border-text/10 pt-6 text-center text-sm text-text/65">
           &copy; {new Date().getFullYear()} On The Block Digital. All rights
           reserved.
         </div>

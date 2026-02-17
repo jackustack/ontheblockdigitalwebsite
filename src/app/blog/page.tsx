@@ -41,7 +41,7 @@ export default function BlogPage() {
           {posts.map((post) => (
             <li key={post.slug}>
               <article className="rounded-lg p-6 transition-colors hover:bg-bg-subtle">
-                <div className="flex items-center gap-2 text-sm text-text/50">
+                <div className="flex items-center gap-2 text-sm text-text/65">
                   <time dateTime={post.date}>
                     {new Date(post.date).toLocaleDateString("en-US", {
                       year: "numeric",

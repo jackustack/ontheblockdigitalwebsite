@@ -42,6 +42,15 @@ export function getAllPosts(): BlogPostMeta[] {
   );
 }
 
+export function getPostsByCategory(category: string): BlogPostMeta[] {
+  return getAllPosts().filter((post) => post.category === category);
+}
+
+export function getAllCategories(): string[] {
+  const posts = getAllPosts();
+  return [...new Set(posts.map((post) => post.category))];
+}
+
 export function getPostBySlug(slug: string): BlogPost | null {
   const filePath = path.join(BLOG_DIR, `${slug}.mdx`);
 

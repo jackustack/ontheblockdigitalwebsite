@@ -76,13 +76,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </nav>
 
         <header className="mb-10">
-          <time dateTime={post.date} className="text-sm text-text/50">
-            {new Date(post.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </time>
+          <div className="flex items-center gap-2 text-sm text-text/50">
+            <time dateTime={post.date}>
+              {new Date(post.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+            <span aria-hidden="true">&middot;</span>
+            <Link
+              href={`/blog/category/${post.category}`}
+              className="hover:text-accent"
+            >
+              {post.category.charAt(0).toUpperCase() + post.category.slice(1)}
+            </Link>
+          </div>
           <h1 className="mt-2 font-heading text-3xl font-bold text-primary sm:text-4xl">
             {post.title}
           </h1>

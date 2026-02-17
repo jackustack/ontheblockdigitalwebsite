@@ -40,26 +40,33 @@ export default function BlogPage() {
         <ul className="mt-12 space-y-10">
           {posts.map((post) => (
             <li key={post.slug}>
-              <article>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="group block rounded-lg p-6 transition-colors hover:bg-bg-subtle"
-                >
-                  <time
-                    dateTime={post.date}
-                    className="text-sm text-text/50"
-                  >
+              <article className="rounded-lg p-6 transition-colors hover:bg-bg-subtle">
+                <div className="flex items-center gap-2 text-sm text-text/50">
+                  <time dateTime={post.date}>
                     {new Date(post.date).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
                       day: "numeric",
                     })}
                   </time>
-                  <h2 className="mt-1 font-heading text-xl font-bold text-primary group-hover:text-accent">
+                  <span aria-hidden="true">&middot;</span>
+                  <Link
+                    href={`/blog/category/${post.category}`}
+                    className="hover:text-accent"
+                  >
+                    {post.category.charAt(0).toUpperCase() +
+                      post.category.slice(1)}
+                  </Link>
+                </div>
+                <h2 className="mt-1 font-heading text-xl font-bold">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="text-primary hover:text-accent"
+                  >
                     {post.title}
-                  </h2>
-                  <p className="mt-2 text-text/70">{post.description}</p>
-                </Link>
+                  </Link>
+                </h2>
+                <p className="mt-2 text-text/70">{post.description}</p>
               </article>
             </li>
           ))}

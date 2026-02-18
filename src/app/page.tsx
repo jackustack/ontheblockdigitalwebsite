@@ -38,7 +38,7 @@ export default function HomePage() {
             Your neighbors are searching for you right now.
           </SectionHeading>
           <p className="mb-10 text-xl text-text/70">
-            Are they finding you — or your competition?
+            Are they finding you?
           </p>
           <FunnelFlow />
         </div>

@@ -168,15 +168,27 @@ export default function AboutPage() {
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold text-primary">
-                Terrance — Founder
+                Jack Tyler — Founder
               </h3>
               <p className="mt-2 text-lg text-text/70">
-                Oakland born and raised. Terrance spent years watching Main
-                Street businesses struggle to compete online — not because they
-                lacked quality, but because nobody was in their corner. On The
-                Block Digital is his answer to that. When he&apos;s not helping
-                businesses get found, you&apos;ll find him exploring
-                Rockridge&apos;s coffee shops or walking the Lake Merritt loop.
+                Jack has lived in Oakland with his family near Lake Merritt
+                since 2010. Before starting On The Block Digital, he spent
+                over a decade building data systems and solving technical
+                problems for local businesses and nonprofits — from a
+                healthcare workforce nonprofit in Oakland to a global
+                manufacturing company in the East Bay. He&apos;s been a
+                Salesforce architect, a data analyst, and a consultant who
+                ran his own practice right here in Oakland.
+              </p>
+              <p className="mt-4 text-lg text-text/70">
+                What all that work had in common: sitting down with real
+                people, figuring out what they actually needed, and building
+                something better than what they had. On The Block Digital
+                is the same idea applied to the businesses on his block.
+                Jack saw too many good businesses — the ones his family
+                actually goes to — getting buried online while chains with
+                bigger budgets took over the search results. So he started
+                fixing it.
               </p>
             </div>
           </div>

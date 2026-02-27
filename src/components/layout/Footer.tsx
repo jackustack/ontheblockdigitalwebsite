@@ -2,7 +2,6 @@ import Link from "next/link";
 
 const footerLinks = [
   { href: "/results", label: "Results" },
-  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -65,8 +64,19 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-text/10 pt-6 text-center text-sm text-text/65">
-          &copy; {new Date().getFullYear()} On The Block Digital. All rights
-          reserved.
+          <p>&copy; {new Date().getFullYear()} On The Block Digital. All rights reserved.</p>
+          <p className="mt-1">
+            On The Block Digital is a{" "}
+            <a
+              href="https://unifiedstack.io"
+              className="underline hover:text-text/90"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Unified Stack LLC
+            </a>{" "}
+            company.
+          </p>
         </div>
       </div>
     </footer>

@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { OutcomeCard } from "@/components/ui/OutcomeCard";
 import { LeadCaptureForm } from "@/components/ui/LeadCaptureForm";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { ogImageUrl } from "@/lib/utils";
+import { ogImageUrl, SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "About On The Block Digital | Your Neighbors Who Know Marketing",
   description:
-    "On The Block Digital is a hyper-local digital growth partner for Main Street businesses. We help you get found, get chosen, and grow.",
+    "About On The Block Digital — a local business growth company based in Oakland, CA. We help small businesses get found online, get more calls, and bring more customers through the door.",
+  alternates: {
+    canonical: `${SITE_URL}/about`,
+  },
   openGraph: {
     images: [
       {
@@ -189,6 +193,31 @@ export default function AboutPage() {
                 actually goes to — getting buried online while chains with
                 bigger budgets took over the search results. So he started
                 fixing it.
+              </p>
+              <p className="mt-4 text-lg text-text/70">
+                On The Block Digital is operated by{" "}
+                <Link
+                  href="https://unifiedstack.io"
+                  className="text-primary underline hover:text-accent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Unified Stack LLC
+                </Link>
+                , founded by{" "}
+                <Link
+                  href="https://jackatyler.com"
+                  className="text-primary underline hover:text-accent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Jack Tyler
+                </Link>{" "}
+                — a data architect and systems integrator with 10+ years of
+                experience building enterprise data systems, automated
+                workflows, and digital infrastructure. Jack brings the same
+                technical rigor used in enterprise data architecture to
+                helping local businesses compete online.
               </p>
             </div>
           </div>

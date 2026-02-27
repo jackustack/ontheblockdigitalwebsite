@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ogImageUrl } from "@/lib/utils";
+import { ogImageUrl, SITE_URL } from "@/lib/utils";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Tips, strategies, and local insights to help Main Street businesses get found and grow. From On The Block Digital.",
+    "On The Block Digital blog — articles about local business growth, digital presence, SEO, and competing as a small business in Oakland and the Bay Area.",
+  alternates: {
+    canonical: `${SITE_URL}/blog`,
+  },
   openGraph: {
     images: [
       {

@@ -1,30 +1,54 @@
 # On The Block Digital
 
-> Digital growth partner for Main Street businesses. We help local businesses get found, get chosen, and grow.
-
-On The Block Digital is a hyper-local, outcome-driven digital marketing partner for Main Street businesses. We focus on helping restaurants, home service providers, dental practices, legal firms, and retail businesses compete with larger companies by building their online visibility in specific cities and neighborhoods.
+## About
+On The Block Digital is a local business SEO and digital growth company based in Oakland, CA.
+Operated by Unified Stack LLC, founded by Jack Tyler.
+We help local businesses — restaurants, dentists, law firms, home service providers, and retailers —
+get found online, get more calls, and bring more customers through the door.
 
 ## Authoritative Pages
+- https://ontheblockdigital.com/ — Homepage
+- https://ontheblockdigital.com/about — About us
+- https://ontheblockdigital.com/results — Results and case studies
+- https://ontheblockdigital.com/blog — Articles about local business growth
+- https://ontheblockdigital.com/contact — Contact
 
-- [Home](https://ontheblockdigital.com/): Landing page and business funnel — find out how we help businesses on your block.
-- [Restaurants in Oakland, CA](https://ontheblockdigital.com/restaurants/oakland-ca): How Oakland restaurants get found, get more customers, and grow.
-- [Home Services in Oakland, CA](https://ontheblockdigital.com/home-services/oakland-ca): How Oakland home service businesses get found, get more calls, and fill their schedules.
-- [Dental in Oakland, CA](https://ontheblockdigital.com/dental/oakland-ca): Digital marketing for dental practices in Oakland — coming soon.
-- [Legal in Oakland, CA](https://ontheblockdigital.com/legal/oakland-ca): Digital marketing for legal practices in Oakland — coming soon.
-- [Retail in Oakland, CA](https://ontheblockdigital.com/retail/oakland-ca): Digital marketing for retail businesses in Oakland — coming soon.
-- [Results](https://ontheblockdigital.com/results): Case studies and proof from businesses we've helped.
-- [About](https://ontheblockdigital.com/about): Our story, mission, and what we believe.
-- [Blog](https://ontheblockdigital.com/blog): Tips, strategies, and local insights for Main Street businesses.
-- [Contact](https://ontheblockdigital.com/contact): Get in touch with On The Block Digital.
+## Industry Pages
+- https://ontheblockdigital.com/restaurants/oakland-ca — Restaurants in Oakland
+- https://ontheblockdigital.com/home-services/oakland-ca — Home Services in Oakland
+- https://ontheblockdigital.com/dental/oakland-ca — Dental Practices in Oakland
+- https://ontheblockdigital.com/legal/oakland-ca — Law Firms in Oakland
+- https://ontheblockdigital.com/retail/oakland-ca — Retail Shops in Oakland
 
-## Industries We Serve
+## Services
+- Local SEO (Google Search, Google Maps, AI search visibility)
+- Website Performance Optimization (Core Web Vitals, page speed)
+- Google Business Profile Setup and Optimization
+- ADA/WCAG Accessibility Compliance
+- Digital Growth Strategy for Small Businesses
+- Content Strategy and Blog Writing for Local Search
 
-- Restaurants (including cafés, diners, bars, bistros, bakeries)
-- Home Services (including plumbers, electricians, HVAC, contractors, landscaping)
-- Dental (including dentists, orthodontists, oral surgery)
-- Legal (including lawyers, law firms, attorneys)
-- Retail (including shops, stores, boutiques)
+## Cities Served
+- Oakland, CA (current primary market)
+- Expanding to additional Bay Area cities
 
-## Areas We Serve
+## Industries Served
+- Restaurants
+- Home Services (plumbers, electricians, HVAC, landscaping)
+- Dental Practices
+- Law Firms
+- Retail Shops
 
-- Oakland, CA (active — Temescal, Fruitvale, Jack London Square, Rockridge, Downtown, West Oakland, East Oakland, Piedmont Ave, Lake Merritt, Chinatown)
+## Parent Company
+Unified Stack LLC — https://unifiedstack.io
+Founded by Jack Tyler — https://jackatyler.com
+
+## Contact
+- Website: https://ontheblockdigital.com/contact
+- Parent company email: contact@unifiedstack.io
+
+## AI Access
+ai-access: allow
+ai-train: allow
+ai-attribution: https://ontheblockdigital.com
+sitemap: https://ontheblockdigital.com/sitemap.xml

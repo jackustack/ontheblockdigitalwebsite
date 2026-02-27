@@ -4,12 +4,15 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { OutcomeCard } from "@/components/ui/OutcomeCard";
 import { LeadCaptureForm } from "@/components/ui/LeadCaptureForm";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { ogImageUrl } from "@/lib/utils";
+import { ogImageUrl, SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Contact On The Block Digital | Let's Talk About Your Block",
   description:
-    "Get in touch with On The Block Digital. Tell us about your business and we'll show you how to get found, get more calls, and grow.",
+    "Contact On The Block Digital. Get in touch to learn how we can help your local business get found online in Oakland and the Bay Area.",
+  alternates: {
+    canonical: `${SITE_URL}/contact`,
+  },
   openGraph: {
     images: [
       {

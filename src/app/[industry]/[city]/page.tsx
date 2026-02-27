@@ -11,10 +11,21 @@ import {
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CityBadge } from "@/components/city/CityBadge";
 import { LeadCaptureForm } from "@/components/ui/LeadCaptureForm";
-import { SITE_NAME, ogImageUrl } from "@/lib/utils";
+import { SITE_NAME, SITE_URL, ogImageUrl } from "@/lib/utils";
 
 interface PageProps {
   params: Promise<{ industry: string; city: string }>;
+}
+
+function getIndustryBlurb(slug: string, cityName: string): string {
+  const blurbs: Record<string, string> = {
+    restaurants: "Get found when your neighbors search for places to eat",
+    "home-services": "Plumbers, electricians, HVAC, landscaping — get found when homeowners search for help",
+    dental: "Show up when patients search 'dentist near me'",
+    legal: "Be the first firm potential clients find online",
+    retail: "Bring more foot traffic through your door",
+  };
+  return blurbs[slug] ?? `Get found by customers in ${cityName}`;
 }
 
 export async function generateStaticParams() {
@@ -32,8 +43,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const title = `Get More Customers for Your ${industry.name} Business in ${city.name}`;
     return {
       title: `${title} | ${SITE_NAME}`,
-      description: `${SITE_NAME} helps ${industry.name.toLowerCase()} businesses in ${city.name}, ${city.state} get found, get chosen, and grow. Outcome-driven digital marketing for your block.`,
+      description: `Local SEO and digital growth for ${industry.name.toLowerCase()} businesses in ${city.name}, ${city.state}. ${getIndustryBlurb(industry.slug, city.name)}. ${SITE_NAME}.`,
+      alternates: {
+        canonical: `${SITE_URL}/${industry.slug}/${city.slug}`,
+      },
       openGraph: {
+        title: `${title} | ${SITE_NAME}`,
+        description: `Local SEO and digital growth for ${industry.name.toLowerCase()} businesses in ${city.name}, ${city.state}. ${getIndustryBlurb(industry.slug, city.name)}.`,
+        url: `${SITE_URL}/${industry.slug}/${city.slug}`,
         images: [{ url: ogImageUrl(title, `Outcome-driven marketing in ${city.name}, ${city.state}`, city.slug), width: 1200, height: 630 }],
       },
     };
@@ -42,8 +59,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const title = `${industry.name} Marketing in ${city.name} — Coming Soon`;
   return {
     title: `${title} | ${SITE_NAME}`,
-    description: `We're bringing outcome-driven digital marketing to ${industry.name.toLowerCase()} businesses in ${city.name}, ${city.state}. Be the first on the block.`,
+    description: `Local SEO and digital growth for ${industry.name.toLowerCase()} businesses in ${city.name}, ${city.state}. Be the first ${industry.name.toLowerCase()} on the block. ${SITE_NAME}.`,
+    alternates: {
+      canonical: `${SITE_URL}/${industry.slug}/${city.slug}`,
+    },
     openGraph: {
+      title: `${title} | ${SITE_NAME}`,
+      description: `Local SEO and digital growth for ${industry.name.toLowerCase()} businesses in ${city.name}, ${city.state}. Be the first on the block.`,
+      url: `${SITE_URL}/${industry.slug}/${city.slug}`,
       images: [{ url: ogImageUrl(title, `Be the first on the block in ${city.name}`, city.slug), width: 1200, height: 630 }],
     },
   };

@@ -1,8 +1,35 @@
+import type { Metadata } from "next";
 import { FunnelFlow } from "@/components/funnel/FunnelFlow";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { OutcomeCard } from "@/components/ui/OutcomeCard";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { organizationSchema } from "@/lib/schema";
+import {
+  organizationSchema,
+  localBusinessSchema,
+  professionalServiceHomeSchema,
+} from "@/lib/schema";
+import { SITE_URL } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  description:
+    "On The Block Digital — Local business SEO, website performance, and digital growth for restaurants, dentists, law firms, home services, and retail in Oakland and the Bay Area. Get found. Get more calls. Bring more people through the door.",
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    title: "On The Block Digital — Local SEO for Small Businesses",
+    description:
+      "Local business SEO, website performance, and digital growth for restaurants, dentists, law firms, home services, and retail in Oakland and the Bay Area.",
+    type: "website",
+    url: SITE_URL,
+  },
+  twitter: {
+    card: "summary",
+    title: "On The Block Digital — Local SEO for Small Businesses",
+    description:
+      "Get found. Get more calls. Bring more people through the door. Local SEO for Oakland and Bay Area businesses.",
+  },
+};
 
 const outcomes = [
   {
@@ -31,6 +58,8 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={organizationSchema()} />
+      <JsonLd data={localBusinessSchema()} />
+      <JsonLd data={professionalServiceHomeSchema()} />
 
       <section className="px-4 py-20 md:py-32">
         <div className="mx-auto max-w-3xl text-center">

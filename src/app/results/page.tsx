@@ -3,12 +3,15 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { OutcomeCard } from "@/components/ui/OutcomeCard";
 import { LeadCaptureForm } from "@/components/ui/LeadCaptureForm";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { ogImageUrl } from "@/lib/utils";
+import { ogImageUrl, SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Why Main Street Businesses Are Invisible Online | On The Block Digital",
   description:
-    "Most small businesses are losing customers they don't even know about. See the real numbers on what's keeping Main Street businesses from being found.",
+    "Real results from On The Block Digital. See how we've helped local businesses in Oakland improve their search rankings, website performance, and customer acquisition.",
+  alternates: {
+    canonical: `${SITE_URL}/results`,
+  },
   openGraph: {
     images: [
       {
